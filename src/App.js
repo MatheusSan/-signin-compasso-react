@@ -1,15 +1,16 @@
 import React from 'react';
 
+import Routes from './routes';
+import { BaseCSS } from 'styled-bootstrap-grid';
+import GlobalStyle from './GlobalStyle';
+
 function App() {
   return (
-    <div>
-      <header >
-        <h1>Primeiro Commit</h1>
-        <p>
-          Rumo A Contratação.
-        </p>
-      </header>
-    </div>
+    <>
+      <GlobalStyle />
+      <BaseCSS />
+      <Routes/>
+    </>
   );
 }
 
