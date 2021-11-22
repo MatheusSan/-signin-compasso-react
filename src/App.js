@@ -1,12 +1,15 @@
 import React from "react";
 import GlobalStyles from "./GlobalStyle";
-import Login from "./pages/login/Login";
+import { AuthProvider } from "./Context/AuthUser";
+import Routes from "./routes";
 
-export default function App() {
+function App() {
   return (
-    <>
-      <GlobalStyles />
-      <Login />
-    </>
+    <AuthProvider> 
+    <GlobalStyles />
+      <Routes />
+    </AuthProvider>
   );
 }
+
+export default App;
