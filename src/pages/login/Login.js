@@ -13,18 +13,20 @@ import {
   UserIcon,
   PasswordIcon,
   LogoIcon,
+  LogoForm,
 } from "../login/styles";
 
 function Login() {
   return (
     <>
       <Page>
+        <LogoForm></LogoForm>
         <FormContainer>
           <FormBox>
             <Title>Olá,</Title>
             <SubTitle>
               Para continuar navegando de forma
-              <br /> segura, efetue o login na rede.{" "}
+              <br /> segura, efetue o login na rede.
             </SubTitle>
             <LoginTitle>Login</LoginTitle>
             <StyledInput type="email" placeholder="Usuário" />

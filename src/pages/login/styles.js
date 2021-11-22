@@ -9,6 +9,10 @@ export const Page = styled.div`
   width: 100%;
   background: linear-gradient(180deg, #33383d 0%, #1c1d20 100%);
   box-shadow: 4px 4px 70px rgba(0, 0, 0, 0.25);
+  @media (max-width: 1024px) {
+    height: auto;
+    min-height: 100vh;
+  }
 `;
 
 export const FormContainer = styled.div`
@@ -17,7 +21,14 @@ export const FormContainer = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 600px;
+  height: 100vh;
+
+  height: 100vh;
+  width: 50%;
+  @media (max-width: 1024px) {
+    width: 100%;
+    background: #1c1d20;
+  }
 `;
 
 export const FormBox = styled.div`
@@ -27,7 +38,9 @@ export const FormBox = styled.div`
   height: auto;
   width: auto;
   flex-flow: column;
-  margin-top: 450px;
+  margin-top: 10%;
+  @media (max-height: 750px) {
+  }
 `;
 
 export const BackgroundContainer = styled.div`
@@ -39,6 +52,9 @@ export const BackgroundContainer = styled.div`
   background-size: cover;
   display: flex;
   justify-content: center;
+  @media (max-width: 1024px) {
+    display: none;
+  }
 `;
 
 export const Title = styled.p`
@@ -53,6 +69,12 @@ export const SubTitle = styled.p`
   font-size: 16px;
   text-align: left;
   margin-bottom: 135px;
+  @media (max-width: 1024px) {
+    margin-bottom: 93px;
+  }
+  @media (max-height: 750px) {
+    margin-bottom: 40px;
+  }
 `;
 
 export const LoginTitle = styled.p`
@@ -60,6 +82,9 @@ export const LoginTitle = styled.p`
   font-size: 30px;
   text-align: left;
   margin-bottom: 32px;
+  @media (max-height: 750px) {
+    margin-bottom: 20px;
+  }
 `;
 
 export const UserIcon = styled.p`
@@ -69,6 +94,11 @@ export const UserIcon = styled.p`
   margin-left: 89%;
   position: relative;
   top: -80px;
+
+  @media (max-width: 1024px) {
+    margin-bottom: 20px;
+    top: -44px;
+  }
 `;
 
 export const PasswordIcon = styled.p`
@@ -79,6 +109,10 @@ export const PasswordIcon = styled.p`
   margin-left: 89%;
   position: relative;
   top: -80px;
+  @media (max-width: 1024px) {
+    margin-bottom: 20px;
+    top: -44px;
+  }
 `;
 
 export const LogoIcon = styled.p`
@@ -86,4 +120,20 @@ export const LogoIcon = styled.p`
   width: 306px;
   height: 69px;
   margin-top: 35px;
+`;
+
+export const LogoForm = styled.p`
+  background-image: url(${Logo});
+  display: none;
+  width: 306px;
+  height: 69px;
+  background-position: bottom left;
+  background-repeat: no-repeat;
+  top: 11px;
+  right: 20px;
+  float: right;
+  position: absolute;
+  @media (max-width: 1024px) {
+    display: block;
+  }
 `;

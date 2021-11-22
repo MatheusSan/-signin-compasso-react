@@ -13,5 +13,10 @@ const StyledInput = styled.input`
   ::placeholder {
     color: #ffffff;
   }
+  @media (max-width: 1024px) {
+    margin-bottom: -5px;
+    width: 90%;
+    max-width: 379px;
+  }
 `;
 export default StyledInput;

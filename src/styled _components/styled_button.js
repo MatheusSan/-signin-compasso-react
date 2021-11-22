@@ -12,6 +12,14 @@ const StyledButton = styled.button`
   font-weight: bold;
   font-size: 18px;
   margin-top: 82px;
+  @media (max-width: 1024px) {
+    margin-top: 20px;
+    width: 105%;
+    max-width: 379px;
+  }
+  @media (max-height: 750px) {
+    margin-top: 0px;
+  }
 `;
 
 export default StyledButton;
