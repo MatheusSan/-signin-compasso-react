@@ -18,5 +18,8 @@ const StyledInput = styled.input`
     width: 90%;
     max-width: 379px;
   }
+  /* @media (max-height: 850px) {
+    margin-bottom: -10px;
+  } */
 `;
 export default StyledInput;

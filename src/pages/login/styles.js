@@ -39,8 +39,6 @@ export const FormBox = styled.div`
   width: auto;
   flex-flow: column;
   margin-top: 10%;
-  @media (max-height: 750px) {
-  }
 `;
 
 export const BackgroundContainer = styled.div`
@@ -72,7 +70,7 @@ export const SubTitle = styled.p`
   @media (max-width: 1024px) {
     margin-bottom: 93px;
   }
-  @media (max-height: 750px) {
+  @media (max-height: 850px) {
     margin-bottom: 40px;
   }
 `;
