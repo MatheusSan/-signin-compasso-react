@@ -1,12 +1,58 @@
-
+import React, { useState } from 'react';
 import {Container, Row, Col } from 'styled-bootstrap-grid';
+import { format } from 'date-fns';
+import { pt } from 'date-fns/locale';
 import ContentWrapper from './styles';
 import { H3, H4, H6 } from '../../styles';
+import { useHistory } from 'react-router-dom';
 import logoBall from '../../assets/logged/logoBall.png';
 import logoHeader from '../../assets/logged/LogoCompasso.png';
 import iconCloud from '../../assets/logged/icon_cloud.svg';
 
+export default function Logged() {
+  const history = useHistory();
+  const [countDown, setcountDown] = useState(60);
+  const [time, setTime] = useState("- : -");
+  const [date, setDate] = useState();
+  
+  function logout() {
+    history.push('/');
+  }
+  
+  function reset() {
+    setcountDown(60);
+  }
 
+  function getDataTimes(){
+    const now = new Date();
+    const formattedTime = format(
+      now, 
+      "HH':'mm",
+      {locale: pt}
+      );
+      setTime(formattedTime);
+    const formattedDate = format(
+      now, 
+      "EEEE',' dd 'de' MMMM 'de' y",
+      {locale: pt}
+      );
+    setDate(formattedDate);
+  }
+
+  React.useEffect(() => {
+    if(countDown <= 0) {
+      logout();
+    }
+    const timer =
+    countDown > 0 && setInterval(() => {
+      setcountDown(countDown - 1);
+      getDataTimes();
+    }
+    , 1000);
+    return () => clearInterval(timer);
+    
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [countDown]);
 
   return(
     <ContentWrapper>
@@ -18,18 +64,18 @@ import iconCloud from '../../assets/logged/icon_cloud.svg';
             </div>
           </Col>
           <Col md={4} sm={6} xs={6} className="header-end" hiddenMdUp="true">
-              <H4 className="city">Passo Fundo - RS</H4>
+              <H4 className="city">Porto Alegre - RS</H4>
               <div>
                 <img src={ iconCloud } alt="icon-cloud"/>
                 <span className="degree">22º</span>
               </div>           
             </Col>
           <Col md={4} sm={12} className="header-mid">
-          <span className="timer">{time}</span>
+            <span className="timer">{time}</span>
             <H3>{date}</H3>
           </Col>
           <Col md={4} className="header-end" hiddenMdDown="true">
-            <H4>Passo Fundo - RS</H4>
+            <H4>Porto Alegre - RS</H4>
             <div>
               <img src={ iconCloud } alt="icon-cloud"/>
               <span className="degree">22º</span>
@@ -83,3 +129,4 @@ import iconCloud from '../../assets/logged/icon_cloud.svg';
       </Container>
     </ContentWrapper>
   )
+}
