@@ -1,16 +1,14 @@
-import React from 'react';
-
-import Routes from './routes';
-import { BaseCSS } from 'styled-bootstrap-grid';
-import GlobalStyle from './GlobalStyle';
+import React from "react";
+import GlobalStyles from "./GlobalStyle";
+import { AuthProvider } from "./Context/AuthUser";
+import Routes from "./routes";
 
 function App() {
   return (
-    <>
-      <GlobalStyle />
-      <BaseCSS />
-      <Routes/>
-    </>
+    <AuthProvider> 
+    <GlobalStyles />
+      <Routes />
+    </AuthProvider>
   );
 }
 
