@@ -44,7 +44,7 @@ function Login() {
   } = useForm({ resolver: yupResolver(schema) });
 
   const onSubmitHandler = (data) => {
-    const timeLimit = Date.now() + 5000;
+    const timeLimit = Date.now() + 60000;
     handleLogin(data.email, data.password, timeLimit);
     navigate("/home");
     reset();
