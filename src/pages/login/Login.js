@@ -48,7 +48,9 @@ function Login() {
     <>
       <Page>
         <LogoForm></LogoForm>
-        <FormContainer>
+        <FormContainer
+          error={errors.email?.message || errors.password?.message}
+        >
           <FormBox onSubmit={handleSubmit(onSubmitHandler)}>
             <Title>Olá,</Title>
             <SubTitle>
