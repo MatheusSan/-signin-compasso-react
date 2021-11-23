@@ -1,11 +1,13 @@
-import React from "react";
+import React, { useContext } from "react";
 import { useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
 import * as yup from "yup";
+import { useNavigate } from "react-router-dom";
 
 import StyledButton from "../../styled _components/styled_button";
 import StyledInput from "../../styled _components/styled_input";
 
+import { Context } from "../../Context/AuthUser";
 import {
   Page,
   FormContainer,
@@ -32,6 +34,8 @@ const schema = yup.object().shape({
 });
 
 function Login() {
+  let navigate = useNavigate();
+  const {handleLogin} = useContext(Context);
   const {
     register,
     handleSubmit,
@@ -40,7 +44,9 @@ function Login() {
   } = useForm({ resolver: yupResolver(schema) });
 
   const onSubmitHandler = (data) => {
-    console.log(data);
+    const timeLimit = Date.now() + 60000;
+    handleLogin(data.email, data.password, timeLimit);
+    navigate("/home");
     reset();
   };
 
