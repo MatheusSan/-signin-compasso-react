@@ -3,14 +3,14 @@ import {Container, Row, Col } from 'styled-bootstrap-grid';
 import { format } from 'date-fns';
 import { pt } from 'date-fns/locale';
 import ContentWrapper from './styles';
-import { H3, H4, H6 } from '../../styles';
-import { useHistory } from 'react-router-dom';
+import { H3, H4, H6 } from './styles';
+import { useNavigate } from 'react-router-dom';
 import logoBall from '../../assets/logged/logoBall.png';
 import logoHeader from '../../assets/logged/LogoCompasso.png';
 import iconCloud from '../../assets/logged/icon_cloud.svg';
 
 export default function Logged() {
-  const history = useHistory();
+  const history = useNavigate();
   const [countDown, setcountDown] = useState(60);
   const [time, setTime] = useState("- : -");
   const [date, setDate] = useState();
