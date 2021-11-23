@@ -5,7 +5,7 @@ const StyledInput = styled.input`
   height: 67px;
   border-radius: 50px;
   background-color: rgba(255, 255, 255, 0);
-  border: ${props => props.error ? "solid 1px #E9B425" : "solid 1px #FFF"};
+  border: ${(props) => (props.error ? "solid 1px #E9B425" : "solid 1px #FFF")};
   color: #ffffff;
   padding: 0px 20px 0px 20px;
   font-size: 16px;
@@ -18,8 +18,5 @@ const StyledInput = styled.input`
     width: 90%;
     max-width: 379px;
   }
-  /* @media (max-height: 850px) {
-    margin-bottom: -10px;
-  } */
 `;
 export default StyledInput;

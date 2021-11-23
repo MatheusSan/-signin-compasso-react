@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 const StyledButton = styled.button`
-  width: 379px;
+  width: 339px;
   height: 67px;
   border-radius: 50px;
   opacity: transparent;
@@ -16,7 +16,6 @@ const StyledButton = styled.button`
   @media (max-width: 1024px) {
     margin-top: 20px;
     width: 105%;
-    max-width: 379px;
   }
   @media (max-height: 750px) {
     margin-top: 0px;

@@ -10,8 +10,7 @@ export const Page = styled.div`
   background: linear-gradient(180deg, #33383d 0%, #1c1d20 100%);
   box-shadow: 4px 4px 70px rgba(0, 0, 0, 0.25);
   @media (max-width: 1024px) {
-    height: auto;
-    min-height: 100vh;
+    background: none;
   }
 `;
 
@@ -28,6 +27,7 @@ export const FormContainer = styled.div`
   @media (max-width: 1024px) {
     width: 100%;
     background: #1c1d20;
+    height: ${(props) => (props.error ? "115vh" : "105vh")};
   }
 `;
 
@@ -39,6 +39,7 @@ export const FormBox = styled.form`
   width: auto;
   flex-flow: column;
   margin-top: 10%;
+  margin-right: 3%;
 `;
 
 export const BackgroundContainer = styled.div`
@@ -127,12 +128,15 @@ export const LogoForm = styled.p`
   height: 69px;
   background-position: bottom left;
   background-repeat: no-repeat;
+  background-size: contain;
   top: 11px;
-  right: 20px;
+  right: 8%;
   float: right;
   position: absolute;
   @media (max-width: 1024px) {
     display: block;
+    width: 248px;
+    height: 57px;
   }
 `;
 
@@ -142,7 +146,7 @@ export const Error = styled.p`
   font-size: 16px;
   line-height: 20px;
   text-align: center;
-  color: #E9B425;
+  color: #e9b425;
   padding-bottom: 20px;
   line-height: 22px;
 `;
