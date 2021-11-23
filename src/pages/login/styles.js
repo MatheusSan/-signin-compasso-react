@@ -31,7 +31,7 @@ export const FormContainer = styled.div`
   }
 `;
 
-export const FormBox = styled.div`
+export const FormBox = styled.form`
   display: flex;
   justify-content: center;
   text-align: center;
@@ -134,4 +134,15 @@ export const LogoForm = styled.p`
   @media (max-width: 1024px) {
     display: block;
   }
+`;
+
+export const Error = styled.p`
+  font-style: normal;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 20px;
+  text-align: center;
+  color: #E9B425;
+  padding-bottom: 20px;
+  line-height: 22px;
 `;
