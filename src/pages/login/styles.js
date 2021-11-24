@@ -34,12 +34,29 @@ export const FormContainer = styled.div`
 export const FormBox = styled.form`
   display: flex;
   justify-content: center;
+  align-items: center;
   text-align: center;
   height: auto;
   width: auto;
   flex-flow: column;
   margin-top: 10%;
-  margin-right: 3%;
+
+  width: 100%;
+`;
+
+export const ResponsiveBox = styled.form`
+  width: 379px;
+  @media (max-width: 1024px) {
+    width: 90%;
+    max-width: 500px;
+  }
+`;
+
+export const IconContainer = styled.form`
+  width: 100%;
+  height: 93px;
+  @media (max-width: 1024px) {
+  }
 `;
 
 export const BackgroundContainer = styled.div`
@@ -89,14 +106,16 @@ export const LoginTitle = styled.p`
 export const UserIcon = styled.p`
   background-image: url(${User});
   width: 20px;
-  height: 20px;
+  background-repeat: no-repeat;
+  height: 25px;
   margin-left: 89%;
   position: relative;
   top: -80px;
-
   @media (max-width: 1024px) {
-    margin-bottom: 20px;
-    top: -44px;
+    float: right;
+    position: relative;
+    transform: translateY(160%);
+    margin-right: 20px;
   }
 `;
 
@@ -109,8 +128,10 @@ export const PasswordIcon = styled.p`
   position: relative;
   top: -80px;
   @media (max-width: 1024px) {
-    margin-bottom: 20px;
-    top: -44px;
+    float: right;
+    position: relative;
+    transform: translateY(160%);
+    margin-right: 20px;
   }
 `;
 

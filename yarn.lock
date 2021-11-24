@@ -230,7 +230,7 @@
   resolved "https://registry.yarnpkg.com/@babel/helper-plugin-utils/-/helper-plugin-utils-7.14.5.tgz#5ac822ce97eec46741ab70a517971e443a70c5a9"
   integrity sha512-/37qQCE3K0vvZKwoK4XU/irIJQdIfCJuhU5eKnNxpFDsOkgFaUAwbv+RYw6eYgsC0E4hS7r5KqGULUogqui0fQ==
 
-"@babel/helper-remap-async-to-generator@^7.12.13", "@babel/helper-remap-async-to-generator@^7.16.0":
+"@babel/helper-remap-async-to-generator@^7.12.13", "@babel/helper-remap-async-to-generator@^7.16.0", "@babel/helper-remap-async-to-generator@^7.16.4":
   version "7.16.4"
   resolved "https://registry.yarnpkg.com/@babel/helper-remap-async-to-generator/-/helper-remap-async-to-generator-7.16.4.tgz#5d7902f61349ff6b963e07f06a389ce139fbfe6e"
   integrity sha512-vGERmmhR+s7eH5Y/cp8PCVzj4XEjerq8jooMfxFdA5xVtAk9Sh4AQsrWgiErUEBjtGrBtOFKDUcWQFW4/dFwMA==

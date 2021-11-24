@@ -1,8 +1,8 @@
 import styled from "styled-components";
 
 const StyledInput = styled.input`
-  width: 339px;
-  height: 67px;
+  width: calc(100% - 42px);
+  height: 60px;
   border-radius: 50px;
   background-color: rgba(255, 255, 255, 0);
   border: ${(props) => (props.error ? "solid 1px #E9B425" : "solid 1px #FFF")};
@@ -15,8 +15,7 @@ const StyledInput = styled.input`
   }
   @media (max-width: 1024px) {
     margin-bottom: -5px;
-    width: 90%;
-    max-width: 379px;
+    width: calc(100% - 40px);
   }
 `;
 export default StyledInput;

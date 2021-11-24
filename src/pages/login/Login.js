@@ -21,6 +21,8 @@ import {
   LogoIcon,
   LogoForm,
   Error,
+  ResponsiveBox,
+  IconContainer,
 } from "../login/styles";
 
 const schema = yup.object().shape({
@@ -35,7 +37,7 @@ const schema = yup.object().shape({
 
 function Login() {
   let navigate = useNavigate();
-  const {handleLogin} = useContext(Context);
+  const { handleLogin } = useContext(Context);
   const {
     register,
     handleSubmit,
@@ -58,40 +60,53 @@ function Login() {
           error={errors.email?.message || errors.password?.message}
         >
           <FormBox onSubmit={handleSubmit(onSubmitHandler)}>
-            <Title>Olá,</Title>
-            <SubTitle>
-              Para continuar navegando de forma
-              <br /> segura, efetue o login na rede.
-            </SubTitle>
-            <LoginTitle>Login</LoginTitle>
-            <StyledInput
-              {...register("email")}
-              type="email"
-              placeholder="Usuário"
-              error={errors.email?.message}
-            />
-            <UserIcon />
-            <StyledInput
-              {...register("password")}
-              type="password"
-              placeholder="Senha"
-              error={errors.password?.message}
-            />
-            <PasswordIcon />
-            {(errors.password?.message || errors.email?.message) && (
-              <>
-                <Error>
-                  Ops, {errors.email?.message && "email"}
-                  {errors.password?.message && errors.email?.message && " ou "}
-                  {errors.password?.message && "senha"}
-                  {!errors.email?.message ? " inválida" : " inválido"}
-                  {errors.password?.message && errors.email?.message && "s"}
-                  <br />
-                  Tente novamente!
-                </Error>
-              </>
-            )}
-            <StyledButton type="submit">Continuar</StyledButton>
+            <ResponsiveBox>
+              <Title>Olá,</Title>
+              <SubTitle>
+                Para continuar navegando de forma
+                <br /> segura, efetue o login na rede.
+              </SubTitle>
+              <LoginTitle>Login</LoginTitle>
+            </ResponsiveBox>
+
+            <ResponsiveBox>
+              <IconContainer>
+                <StyledInput
+                  {...register("email")}
+                  type="email"
+                  placeholder="Usuário"
+                  error={errors.email?.message}
+                />
+                <UserIcon />
+              </IconContainer>
+
+              <IconContainer>
+                <StyledInput
+                  {...register("password")}
+                  type="password"
+                  placeholder="Senha"
+                  error={errors.password?.message}
+                />
+                <PasswordIcon />
+              </IconContainer>
+
+              {(errors.password?.message || errors.email?.message) && (
+                <>
+                  <Error>
+                    Ops, {errors.email?.message && "email"}
+                    {errors.password?.message &&
+                      errors.email?.message &&
+                      " ou "}
+                    {errors.password?.message && "senha"}
+                    {!errors.email?.message ? " inválida" : " inválido"}
+                    {errors.password?.message && errors.email?.message && "s"}
+                    <br />
+                    Tente novamente!
+                  </Error>
+                </>
+              )}
+              <StyledButton type="submit">Continuar</StyledButton>
+            </ResponsiveBox>
           </FormBox>
         </FormContainer>
         <BackgroundContainer>
