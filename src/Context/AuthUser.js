@@ -27,7 +27,7 @@ function AuthProvider({ children }) {
   useEffect(() => {
     if (localStorage.getItem("user") !== null) {
       if (JSON.parse(localStorage.getItem("user")).time > Date.now()) {
-        setUser(localStorage.getItem("user"));
+        setUser(localStorage.getItem("user")); //TODO: muda pra manter só o email e senha
         setAuthenticated(true);
       } else {
         localStorage.removeItem("user");
