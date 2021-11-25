@@ -1,9 +1,9 @@
-import React, { useContext, useState } from 'react';
+import React, { useContext, useState, useEffect  } from 'react';
 import {Container, Row, Col } from 'styled-bootstrap-grid';
-import { format } from 'date-fns';
+import { format, set } from 'date-fns';
 import { pt } from 'date-fns/locale';
 import ContentWrapper from './styles';
-import { H3, H4, H6 } from './styles';
+import { H3, H4, H6, IconTemp } from './styles';
 import { useNavigate } from 'react-router-dom';
 import logoBall from '../../assets/logged/logoBall.png';
 import logoHeader from '../../assets/logged/LogoCompasso.png';
@@ -13,11 +13,15 @@ import { Context } from '../../Context/AuthUser';
 export default function Logged() {
   let navigate = useNavigate();
   const [countDown, setcountDown] = useState(60);
+  const [weather, setWeather] = useState({
+    hasTime: false,
+  });
   const [time, setTime] = useState("- : -");
   const [date, setDate] = useState();
   const { removeLocalStorage } = useContext(Context);
   
   function logout() {
+    setWeather();
     removeLocalStorage();
     navigate('/');
   }
@@ -41,7 +45,7 @@ export default function Logged() {
       );
     setDate(formattedDate);
   }
-
+  
   React.useEffect(() => {
     if(countDown <= 0) {
       logout();
@@ -57,6 +61,22 @@ export default function Logged() {
   // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [countDown]);
 
+  useEffect( () => {
+    fetch(`https://api.openweathermap.org/data/2.5/weather?q=${encodeURI("Porto Alegre")}&appid=b12cc455611ace8c995bf56a99e68964&units=metric&lang=pt_br`)
+      .then( (response) => response.json())
+      .then(
+        (results) =>  {
+          if(results.cod === 200){
+            setWeather({
+              hasTime: true,
+              temp: results.main.temp.toFixed(0),
+              tempIcon: results?.weather[0]?.icon,
+            });
+          }
+        }
+      )
+  }, [weather]);
+
   return(
     <ContentWrapper>
       <Container fluid>
@@ -69,8 +89,9 @@ export default function Logged() {
           <Col md={4} sm={6} xs={6} className="header-end" hiddenMdUp="true">
               <H4 className="city">Porto Alegre - RS</H4>
               <div>
-                <img src={ iconCloud } alt="icon-cloud"/>
-                <span className="degree">22º</span>
+                <IconTemp src={ weather.hasTime ? `http://openweathermap.org/img/wn/${weather.tempIcon}@2x.png` : iconCloud } 
+                 alt="icon-temp"/>
+                <span className="degree">{weather.temp}º</span>
               </div>           
             </Col>
           <Col md={4} sm={12} className="header-mid">
@@ -80,8 +101,9 @@ export default function Logged() {
           <Col md={4} className="header-end" hiddenMdDown="true">
             <H4>Porto Alegre - RS</H4>
             <div>
-              <img src={ iconCloud } alt="icon-cloud"/>
-              <span className="degree">22º</span>
+              <IconTemp src={ weather.hasTime ? `http://openweathermap.org/img/wn/${weather.tempIcon}@2x.png` : iconCloud } 
+              alt="icon-temp"/>
+              <span className="degree">{weather.temp}º</span>
             </div>           
           </Col>
         </Row>
