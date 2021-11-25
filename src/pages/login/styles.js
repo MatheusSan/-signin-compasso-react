@@ -44,7 +44,7 @@ export const FormBox = styled.form`
   width: 100%;
 `;
 
-export const ResponsiveBox = styled.form`
+export const ResponsiveBox = styled.div`
   width: 379px;
   @media (max-width: 1024px) {
     width: 90%;
