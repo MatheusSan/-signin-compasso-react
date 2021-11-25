@@ -183,6 +183,6 @@ export const Text = styled.p`
 `;
 
 export const IconTemp = styled.img`
-  width: 45px;
+  width: 41px;
   height: 45px;
 `;
