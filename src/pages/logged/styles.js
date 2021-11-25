@@ -28,7 +28,7 @@ export default styled.div`
       font-weight: bold;
       font-size: 48px;
       line-height: 61px;
-      margin-left: 15.22px;
+      margin-left: 7.22px;
     }
   }
 
@@ -182,3 +182,7 @@ export const Text = styled.p`
   line-height: 20px;
 `;
 
+export const IconTemp = styled.img`
+  width: 45px;
+  height: 45px;
+`;
