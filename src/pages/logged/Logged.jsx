@@ -1,4 +1,4 @@
-import React, { useContext, useState } from "react";
+import React, { useContext, useState, useEffect  } from "react";
 import { format } from "date-fns";
 import { pt } from "date-fns/locale";
 import { useNavigate } from "react-router-dom";
@@ -34,7 +34,12 @@ import {
   FooterCounterContainer,
   FooterTexto3,
   SubCounterContainer,
+  IconTemp,
+  Textotemp
 } from "../logged/styles";
+
+import iconCloud from '../../assets/logged/icon_cloud.svg';
+
 
 export default function Logged() {
   let navigate = useNavigate();
@@ -73,6 +78,27 @@ export default function Logged() {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [countDown]);
 
+  const [weather, setWeather] = useState({
+    hasTime: false,
+  });
+
+  useEffect( () => {
+    fetch(`https://api.openweathermap.org/data/2.5/weather?q=${encodeURI("Porto Alegre")}&appid=b12cc455611ace8c995bf56a99e68964&units=metric&lang=pt_br`)
+      .then( (response) => response.json())
+      .then(
+        (results) =>  {
+          if(results.cod === 200){
+            setWeather({
+              hasTime: true,
+              temp: results.main.temp.toFixed(0),
+              tempIcon: results?.weather[0]?.icon,
+            });
+          }
+        }
+      )
+  }, [weather]);
+
+
   return (
     <Page>
       <Header>
@@ -82,8 +108,17 @@ export default function Logged() {
           <SubTextHora>{date}</SubTextHora>
         </HoraContainer>
         <Hora></Hora>
-      </Header>
+        <temp>
+        <IconTemp src={ weather.hasTime ? `http://openweathermap.org/img/wn/${weather.tempIcon}@2x.png` : iconCloud } 
+        alt="icon-temp"/>
+        <degree>{weather.temp}º</degree>
+        <Textotemp>
+          Porto Alegre - RS
+        </Textotemp>
 
+        </temp>
+     
+      </Header>
       <Main>
         <LogoBG />
 

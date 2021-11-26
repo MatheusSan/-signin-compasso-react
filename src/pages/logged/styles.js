@@ -242,6 +242,28 @@ export const SubCounterContainer = styled.div`
   display: flex;
   justify-content: flex-end;
 `;
+
+
+
+export const IconTemp = styled.img`
+  width: 41px;
+  height: 45px;
+`;
+
+export const degree = styled.div`
+   font-weight: bold;
+    font-size: 48px;
+     line-height: 61px;
+     margin-left: 15.22px;
+`;
+
+export const Textotemp = styled.div`
+ font-size: 14px;
+ line-height: 18px;
+ display: flex;
+  flex-direction: column;
+`;
+
 // export default styled.div`
 //   background-color: #e0e0e0;
 
