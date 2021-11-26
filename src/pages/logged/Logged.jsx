@@ -20,12 +20,25 @@ import {
   FooterContainer1,
   FooterContainer2,
   FooterTexto,
+  FooterTexto2,
   Divisor,
+  FooterSubContainer1,
+  FooterSubContainer2,
+  FooterButtonBox1,
+  FooterButtonBox2,
+  FooterButtonContainer,
+  Counter,
+  CounterBox,
+  ContinuarRed,
+  Logout,
+  FooterCounterContainer,
+  FooterTexto3,
+  SubCounterContainer,
 } from "../logged/styles";
 
 export default function Logged() {
   let navigate = useNavigate();
-  const [countDown, setcountDown] = useState(600);
+  const [countDown, setcountDown] = useState(6000);
   const [time, setTime] = useState("- : -");
   const [date, setDate] = useState();
   const { removeLocalStorage } = useContext(Context);
@@ -33,10 +46,6 @@ export default function Logged() {
   function logout() {
     removeLocalStorage();
     navigate("/");
-  }
-
-  function reset() {
-    setcountDown(60);
   }
 
   function getDataTimes() {
@@ -98,8 +107,41 @@ export default function Logged() {
             janela para continuar a navegar.
           </FooterTexto>
         </FooterContainer1>
+
         <Divisor></Divisor>
-        <FooterContainer2></FooterContainer2>
+
+        <FooterContainer2>
+          <FooterCounterContainer>
+            <SubCounterContainer>
+              <FooterSubContainer1>
+                <FooterTexto2>
+                  Application <br />
+                  refresh in
+                </FooterTexto2>
+              </FooterSubContainer1>
+              <FooterSubContainer2>
+                <CounterBox>
+                  <Counter>{countDown}</Counter>
+                  <FooterTexto3>seconds</FooterTexto3>
+                </CounterBox>
+              </FooterSubContainer2>
+            </SubCounterContainer>
+
+            <SubCounterContainer></SubCounterContainer>
+          </FooterCounterContainer>
+
+          <FooterButtonContainer>
+            <FooterButtonBox1>
+              <ContinuarRed>
+                Continuar <br />
+                Navegando
+              </ContinuarRed>
+            </FooterButtonBox1>
+            <FooterButtonBox2>
+              <Logout onClick={() => logout()}>Logout</Logout>
+            </FooterButtonBox2>
+          </FooterButtonContainer>
+        </FooterContainer2>
       </Footer>
     </Page>
   );

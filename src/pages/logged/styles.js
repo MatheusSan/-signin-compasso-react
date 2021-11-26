@@ -10,7 +10,6 @@ export const Page = styled.div`
   background: linear-gradient(105.96deg, #ffffff 0%, #f0f0f0 97.86%);
   box-shadow: 4px 4px 70px rgba(0, 0, 0, 0.25);
 `;
-
 export const Main = styled.div`
   width: 100%;
   height: 80%;
@@ -77,7 +76,7 @@ export const SubTextHora = styled.p`
 
 export const HoraContainer = styled.div`
   justify-content: center;
-  margin-left: -220px;
+  margin-left: -178px;
   align-items: center;
   display: flex;
   flex-direction: column;
@@ -115,15 +114,17 @@ export const Footer = styled.div`
 `;
 
 export const FooterContainer1 = styled.div`
-  width: 49%;
+  width: 50%;
   height: 100%;
   @media (max-width: 1024px) {
     display: none;
   }
 `;
 export const FooterContainer2 = styled.div`
-  width: 49%;
+  width: 50%;
   height: 100%;
+  display: flex;
+
   @media (max-width: 1024px) {
     width: 100%;
   }
@@ -151,6 +152,96 @@ export const FooterTexto = styled.p`
   padding-bottom: 8px;
 `;
 
+export const FooterSubContainer1 = styled.div`
+  width: 70%;
+`;
+
+export const FooterSubContainer2 = styled.div`
+  display: flex;
+  flex-direction: column;
+`;
+
+export const FooterCounterContainer = styled.div`
+  width: 70%;
+  display: flex;
+`;
+
+export const FooterButtonBox1 = styled.div`
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #ffffff;
+  max-width: 131px;
+`;
+
+export const FooterButtonContainer = styled.div`
+  display: flex;
+  justify-content: flex-end;
+  width: 30%;
+`;
+
+export const FooterButtonBox2 = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+  max-width: 131px;
+  cursor: pointer;
+`;
+
+export const CounterBox = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+`;
+
+export const FooterTexto2 = styled.p`
+  font-size: 14px;
+  line-height: 15px;
+  text-align: right;
+  color: #ffffff;
+  padding-left: 30%;
+  padding-right: 10%;
+  padding-top: 33px;
+  padding-bottom: 8px;
+`;
+
+export const FooterTexto3 = styled.p`
+  font-size: 14px;
+  line-height: 15px;
+  text-align: right;
+  color: #ffffff;
+`;
+
+export const Counter = styled.p`
+  font-size: 48px;
+  font-weight: bold;
+  color: #ffffff;
+  padding-top: 13px;
+  margin-bottom: -10px;
+`;
+
+export const ContinuarRed = styled.p`
+  font-size: 12px;
+  line-height: 15px;
+  color: #c13216;
+`;
+
+export const Logout = styled.p`
+  font-size: 12px;
+  color: #ffffff;
+  text-align: center;
+  font-weight: 700;
+`;
+
+export const SubCounterContainer = styled.div`
+  width: 50%;
+  height: 100%;
+  display: flex;
+  justify-content: flex-end;
+`;
 // export default styled.div`
 //   background-color: #e0e0e0;
 
