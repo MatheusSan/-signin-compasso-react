@@ -1,6 +1,7 @@
 import styled from "styled-components";
 import LogoHome from "../../assets/logged/LogoCompasso.png";
 import LogoBackground from "../../assets/logged/logoBall.png";
+import BackgroundMobile from "../../assets/logged/CompassoMobile.png";
 
 export const Page = styled.div`
   width: 100%;
@@ -26,6 +27,9 @@ export const TextoContainer = styled.div`
   justify-content: center;
   margin: auto;
   padding-bottom: 50px;
+  @media (max-width: 1440px) {
+    padding-right: 2%;
+  }
   @media (max-width: 1024px) {
     display: none;
   }
@@ -37,7 +41,11 @@ export const TextoRed1 = styled.p`
   font-weight: bold;
   line-height: 82px;
   color: rgba(193, 45, 24, 1);
+  min-width: 750px;
   text-align: right;
+  @media (max-width: 1440px) {
+    font-size: 50px;
+  }
 `;
 
 export const TextoRed2 = styled.p`
@@ -46,12 +54,18 @@ export const TextoRed2 = styled.p`
   line-height: 46px;
   color: #c12d18;
   text-align: right;
+  @media (max-width: 1440px) {
+    font-size: 30px;
+  }
 `;
 
 export const SubTexto = styled.p`
   font-size: 24px;
   line-height: 30px;
   text-align: right;
+  @media (max-width: 1440px) {
+    font-size: 20px;
+  }
 `;
 
 export const Hora = styled.p`
@@ -67,6 +81,9 @@ export const Header = styled.div`
   width: 100%;
   display: flex;
   justify-content: space-between;
+  @media (max-width: 1024px) {
+    height: 75px;
+  }
 `;
 
 export const SubTextHora = styled.p`
@@ -99,8 +116,12 @@ export const LogoBG = styled.div`
   background-size: contain;
   background-position-y: bottom;
   background-image: url(${LogoBackground});
+  @media (max-width: 1440px) {
+    width: 50%;
+  }
   @media (max-width: 1024px) {
     width: 90%;
+    background-image: url(${BackgroundMobile});
   }
 `;
 
@@ -164,30 +185,51 @@ export const FooterSubContainer2 = styled.div`
 export const FooterCounterContainer = styled.div`
   width: 70%;
   display: flex;
+  @media (max-width: 1024px) {
+    display: none;
+  }
 `;
 
 export const FooterButtonBox1 = styled.div`
-  width: 50%;
   display: flex;
   justify-content: center;
   align-items: center;
   background-color: #ffffff;
-  max-width: 131px;
+  min-width: 131px;
+  @media (max-width: 1440px) {
+    min-width: 110px;
+  }
+  @media (max-width: 1024px) {
+    max-width: none;
+    width: 80%;
+  }
 `;
 
 export const FooterButtonContainer = styled.div`
   display: flex;
   justify-content: flex-end;
   width: 30%;
+
+  @media (max-width: 1024px) {
+    width: 100%;
+    flex-direction: row-reverse;
+  }
 `;
 
 export const FooterButtonBox2 = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 50%;
-  max-width: 131px;
+  min-width: 131px;
   cursor: pointer;
+  @media (max-width: 1440px) {
+    min-width: 110px;
+  }
+  @media (max-width: 1024px) {
+    width: 20%;
+    max-width: none;
+    min-width: 131px;
+  }
 `;
 
 export const CounterBox = styled.div`
@@ -195,6 +237,8 @@ export const CounterBox = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  @media (max-width: 1440px) {
+  }
 `;
 
 export const FooterTexto2 = styled.p`
@@ -241,7 +285,17 @@ export const SubCounterContainer = styled.div`
   height: 100%;
   display: flex;
   justify-content: flex-end;
+  @media (max-width: 1440px) {
+    width: 100%;
+    justify-content: center;
+  }
 `;
+
+export const SubBoxTexto2 = styled.div`
+  height: 100%;
+  width: 170px;
+`;
+
 // export default styled.div`
 //   background-color: #e0e0e0;
 

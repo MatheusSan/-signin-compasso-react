@@ -34,6 +34,8 @@ import {
   FooterCounterContainer,
   FooterTexto3,
   SubCounterContainer,
+  SubCounterContainer2,
+  SubBoxTexto2,
 } from "../logged/styles";
 
 export default function Logged() {
@@ -114,10 +116,12 @@ export default function Logged() {
           <FooterCounterContainer>
             <SubCounterContainer>
               <FooterSubContainer1>
-                <FooterTexto2>
-                  Application <br />
-                  refresh in
-                </FooterTexto2>
+                <SubBoxTexto2>
+                  <FooterTexto2>
+                    Application <br />
+                    refresh in
+                  </FooterTexto2>
+                </SubBoxTexto2>
               </FooterSubContainer1>
               <FooterSubContainer2>
                 <CounterBox>
