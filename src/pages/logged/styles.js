@@ -93,7 +93,7 @@ export const SubTextHora = styled.p`
 
 export const HoraContainer = styled.div`
   justify-content: center;
-  margin-left: -178px;
+  margin-left: 25px;
   align-items: center;
   display: flex;
   flex-direction: column;
@@ -108,6 +108,10 @@ export const LogoPage = styled.div`
   margin-left: 40px;
   margin-top: 25px;
   background-image: url(${LogoHome});
+  @media (max-width: 1024px) {
+    margin-left: 20px;
+    margin-top: 15px;
+  }
 `;
 
 export const LogoBG = styled.div`
@@ -296,210 +300,38 @@ export const SubBoxTexto2 = styled.div`
   width: 170px;
 `;
 
-// export default styled.div`
-//   background-color: #e0e0e0;
+export const IconTemp = styled.img`
+  width: 41px;
+  height: 45px;
+`;
 
-//   .header {
-//     padding-right: 41px;
-//     padding-left: 41px;
-//     color: #222222;
-//     .logo-header {
-//       img {
-//         width: 150px;
-//         max-height: 42.75px;
-//       }
-//     }
-//     .header-mid {
-//       text-align: center;
-//       .timer {
-//         font-weight: bold;
-//         font-size: 100.8px;
-//         line-height: 128.1px;
-//       }
-//     }
-//     .header-end {
-//       text-align: end;
-//     }
-//     .degree {
-//       font-weight: bold;
-//       font-size: 48px;
-//       line-height: 61px;
-//       margin-left: 15.22px;
-//     }
-//   }
+export const Degree = styled.div`
+  font-weight: bold;
+  font-size: 48px;
+  line-height: 61px;
+  margin-left: 15.22px;
+`;
 
-//   .body {
-//     .body-left {
-//       position: relative;
-//       height: 749px;
-//       overflow: hidden;
-//     }
-//     .body-left img {
-//       margin-left: -15px;
-//       bottom: 0;
-//     }
+export const Textotemp = styled.div`
+  font-size: 14px;
+  line-height: 18px;
+  display: flex;
+  flex-direction: column;
+`;
 
-//     .body-right {
-//       text-align: end;
-//       padding-right: 134px;
-//       margin-top: 2%;
-//       margin-bottom: 5%;
-//       .content-text-first {
-//         font-weight: bold;
-//         font-size: 36px;
-//         line-height: 46px;
-//         color: #c12d18;
-//       }
-//       .content-text {
-//         font-weight: bold;
-//         font-size: 64px;
-//         line-height: 81px;
-//         color: #c12d18;
-//       }
-//       .sub-text {
-//         font-size: 24px;
-//         line-height: 30px;
-//       }
-//     }
-//   }
+export const Temp = styled.div`
+  display: flex;
+  flex-direction: row;
+`;
 
-//   .footer {
-//     min-height: 100px;
-//     background: linear-gradient(90.16deg, #33383d 0%, #1c1d20 100%);
-//     color: #ffffff;
-//     .footer-first {
-//       border-right: 1px solid #ffffff;
-//       height: 61px;
-//       text-align: right;
-//     }
-//     .footer-mid {
-//       .refresh {
-//         text-align: right;
-//       }
-//       .countDown {
-//         font-weight: bold;
-//         font-size: 48px;
-//         line-height: 61px;
-//         text-align: center;
-//       }
-//     }
-//     .footer-end {
-//       text-align: right;
-//       .refresh,
-//       .logout {
-//         max-width: 131px;
-//       }
-//     }
-//   }
-
-//   @media only screen and (max-width: 768px) {
-//     .header {
-//       padding-top: 20px;
-//       .header-end {
-//         .city {
-//           font-size: 12px;
-//         }
-//         .degree {
-//           font-size: 37px;
-//           line-height: 41px;
-//           margin-left: none;
-//         }
-//       }
-//     }
-
-//     .body {
-//       .body-left {
-//         background: none;
-//         height: auto;
-//       }
-//       .body-right {
-//         margin-bottom: 50px;
-//         padding-right: 10%;
-//         .content-text-first {
-//           font-size: 25.5px;
-//           line-height: 32.2px;
-//         }
-//         .content-text {
-//           font-size: 44.8px;
-//           line-height: 56.7px;
-//         }
-//         .sub-text {
-//           font-size: 16.8px;
-//           line-height: 21px;
-//         }
-//       }
-//     }
-
-//     .footer {
-//       .footer-first {
-//         margin-top: 15px;
-//         border-right: 0px;
-//         text-align: center;
-//       }
-//       .footer-end {
-//         margin-top: 15px;
-//         text-align: center;
-//         .refresh,
-//         .logout {
-//           max-width: 100%;
-//         }
-//       }
-//       .button-refresh,
-//       .button-logout {
-//         margin-bottom: 30px;
-//         border-radius: 5px;
-//         font-weight: bold;
-//         font-size: 18px;
-//       }
-//       .button-refresh {
-//         border: 1px solid #1c1d20;
-//       }
-//       .button-logout {
-//         border: 1px solid #ffffff;
-//       }
-//     }
-//   }
-// `;
-
-// export const H3 = styled.h3`
-//   font-size: 18;
-//   line-height: 23px;
-// `;
-
-// export const H4 = styled.p`
-//   font-size: 14px;
-//   line-height: 18px;
-// `;
-
-// export const H6 = styled.p`
-//   font-size: 12px;
-//   line-height: 15px;
-// `;
-
-// export const Text = styled.p`
-//   font-size: 16px;
-//   line-height: 20px;
-// // `;
-
-// .button-logout {
-//   background: transparent;
-//   width: 100%;
-//   min-height: 100px;
-//   color: #ffffff;
-//   display: inline-block;
-//   text-align: center;
-//   text-decoration: none;
-//   font-size: 12px;
-//   line-height: 15px;
-// }
-// .button-refresh {
-//   background: #ffffff;
-//   width: 100%;
-//   min-height: 100px;
-//   color: #C13216;
-//   display: inline-block;
-//   text-align: center;
-//   text-decoration: none;
-//   font-size: 12px;
-//   line-height: 15px;
-// }
+export const TempBox = styled.div`
+  margin: 25px 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  @media (max-width: 1440px) {
+    margin-top: 50px;
+    margin: 60px 20px;
+  }
+`;
