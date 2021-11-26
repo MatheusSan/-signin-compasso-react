@@ -31,7 +31,7 @@ export const FormContainer = styled.div`
   }
 `;
 
-export const FormBox = styled.form`
+export const FormBox = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
