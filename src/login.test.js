@@ -10,7 +10,7 @@ jest.mock('react-router-dom', () => {
   return {
     __esModule: true,
     ...originalModule,
-    useNavigate: jest.fn(() => 'bar'),
+    useNavigate: jest.fn(() => 'routes'),
   };
 });
 
