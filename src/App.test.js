@@ -14,3 +14,8 @@ describe("Componente principal", () => {
     expect(container.firstChild).toMatchSnapshot();
   });
 });
+
+
+
+
+
