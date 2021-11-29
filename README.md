@@ -3,7 +3,6 @@
 O projeto consiste em um sistema de acesso a conta do usuário na Compass.uol, e então, a partir disso conseguir acessar a tela home, onde lá está a tela inicial do seu perfil com algumas informações atuais e locais. Após isso, o usuário pode se direcionar para sair de sua conta e voltar a página inicial do site.
 
 Para se guiar
-=================
 <!--ts-->
    * [Sobre](#Sobre)
    * [Tabela de Conteudo](#tabela-de-conteudo)
