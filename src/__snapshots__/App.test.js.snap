@@ -1,0 +1,83 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Componente principal O componente App deve ser sempre o mesmo 1`] = `
+<div
+  class="sc-dkPtRN bMWDLf"
+>
+  <p
+    class="sc-egiyK gRQPty"
+  />
+  <div
+    class="sc-hKwDye xYJTH"
+  >
+    <div
+      class="sc-eCImPb hlHdtm"
+    >
+      <div
+        class="sc-jRQBWg cYwGav"
+      >
+        <p
+          class="sc-furwcr gwGZUY"
+        >
+          Olá,
+        </p>
+        <p
+          class="sc-pVTFL nKLuy"
+        >
+          Para continuar navegando de forma
+          <br />
+           segura, efetue o login na rede.
+        </p>
+        <p
+          class="sc-jrQzAO kDmUvw"
+        >
+          Login
+        </p>
+      </div>
+      <div
+        class="sc-jRQBWg cYwGav"
+      >
+        <form
+          class="sc-gKclnd fVbJyO"
+        >
+          <input
+            class="sc-gsDKAQ jcucmt"
+            name="email"
+            placeholder="Usuário"
+            type="email"
+          />
+          <p
+            class="sc-kDTinF kNrnVF"
+          />
+        </form>
+        <form
+          class="sc-gKclnd fVbJyO"
+        >
+          <input
+            class="sc-gsDKAQ jcucmt"
+            name="password"
+            placeholder="Senha"
+            type="password"
+          />
+          <p
+            class="sc-iqseJM ccWGnI"
+          />
+        </form>
+        <button
+          class="sc-bdvvtL gFBdYU"
+          type="submit"
+        >
+          Continuar
+        </button>
+      </div>
+    </div>
+  </div>
+  <div
+    class="sc-iCfMLu ejtFNl"
+  >
+    <p
+      class="sc-crHmcD cVYoUi"
+    />
+  </div>
+</div>
+`;
