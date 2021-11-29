@@ -50,16 +50,16 @@ describe( 'Buscar componentes na tela Home', () => {
             </AuthProvider>    
         );
        expect (screen.getByText("Our mission is")).toBeInTheDocument(); 
-       expect (screen.getByText("Nossa missão é")).toBeInTheDocument(); 
-       expect (screen.getByText("to transform the world")). toBeInTheDocument(); 
+       expect (screen.getByText("nossa missão é")).toBeInTheDocument(); 
+       expect (screen.getByText("transform the world")).toBeInTheDocument(); 
        expect (screen.getByText("transformar o mundo")).toBeInTheDocument();
        expect (screen.getByText("building digital experiences")).toBeInTheDocument();
        expect (screen.getByText("construindo experiências digitais")).toBeInTheDocument();
-       expect (screen.getByText("that enable our client’s growth")).toBeInTheDocument();
+       expect (screen.getByText("that enable our client's growth")).toBeInTheDocument();
        expect (screen.getByText("que permitam o crescimento dos nossos clientes")).toBeInTheDocument();
     })
 
-    it ('Buscar data e hora atual no sistema',  ()=>{
+    it ('Buscar data e hora atual no sistema', ()=>{
         render (
             <AuthProvider>
             <BrowserRouter>
@@ -67,13 +67,12 @@ describe( 'Buscar componentes na tela Home', () => {
             </BrowserRouter> 
             </AuthProvider>   
         );
-        
-        async() => {
-
+        async function exp(){
             expect (await screen.findByText(new Date().getHours() + ':' + new Date().getMinutes())).toBeInTheDocument(); 
             expect (await screen.findByText("de " + new Date().getFullYear())).toBeInTheDocument(); 
             expect (await screen.findByText(new Date().getDate() + " de")).toBeInTheDocument();
-        }
+        };
+        exp();
          
     })  
 })

@@ -1,4 +1,5 @@
 import { render, screen } from "@testing-library/react";
+import "@testing-library/jest-dom";
 import { BrowserRouter } from "react-router-dom";
 import { AuthProvider } from "../../Context/AuthUser";
 
@@ -13,7 +14,7 @@ describe("Botão Continuar", () => {
         </BrowserRouter>
       </AuthProvider>
     );
-    expect(screen.getByText("Continuar")).toBeInTheDocument;
+    expect(screen.getByText("Continuar")).toBeInTheDocument();
   });
 });
 
@@ -26,7 +27,7 @@ describe("Título Olá", () => {
         </BrowserRouter>
       </AuthProvider>
     );
-    expect(screen.getByText("Olá,")).toBeInTheDocument;
+    expect(screen.getByText("Olá,")).toBeInTheDocument();
   });
 });
 
@@ -39,6 +40,6 @@ describe("Subtítulo Login", () => {
         </BrowserRouter>
       </AuthProvider>
     );
-    expect(screen.getByText("Login")).toBeInTheDocument;
+    expect(screen.getByText("Login")).toBeInTheDocument();
   });
 });
